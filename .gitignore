@@ -1,2 +1,3 @@
 vendor/
 Input
+.phpunit.result.cache

@@ -31,4 +31,20 @@ final class FunctionsTest extends TestCase
         $this->assertSame($functions->getLastDigitFromString('just1digit'), 1);
     }
 
+    public function testReplaceFirstWordInString(): void
+    {
+        $functions = new Functions();
+        $this->assertSame($functions->replaceFirstWordInString($functions::$wordDigits, 'one2three4five'), '12three4five');
+        $this->assertSame($functions->replaceFirstWordInString($functions::$wordDigits, 'twone'), '2ne');
+        $this->assertSame($functions->replaceFirstWordInString($functions::$wordDigits, 'NoDigit'), 'NoDigit');
+    }
+    
+    public function testReplaceLastWordInString(): void
+    {
+        $functions = new Functions();
+        $this->assertSame($functions->replaceLastWordInString($functions::$wordDigits, 'one2three4five'), 'one2three45');
+        $this->assertSame($functions->replaceLastWordInString($functions::$wordDigits, 'twone'), 'tw1');
+        $this->assertSame($functions->replaceLastWordInString($functions::$wordDigits, 'NoDigit'), 'NoDigit');
+    }
+
 }
