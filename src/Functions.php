@@ -56,6 +56,6 @@ class Functions
     {
         $reversedWordList = array_map(fn($str) => strrev($str), $wordList);
         $reversedString = strrev($string);
-        return strrev(Self::replaceFirstWordInString($reversedWordList, $reversedString));
+        return strrev($this->replaceFirstWordInString($reversedWordList, $reversedString));
     }
 }
