@@ -11,7 +11,7 @@ class Functions
         $fileContents = file_get_contents(__DIR__ . "/" . $fileName);
         if (is_bool($fileContents)) {
             throw new \RuntimeException(
-                "Failed to get contents of " . __DIR__ . $fileName
+                "Failed to get contents of " . __DIR__ . "/" . $fileName
             );
         }
         return $fileContents;

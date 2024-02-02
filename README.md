@@ -9,6 +9,9 @@ Run `$ docker compose exec php /bin/bash`
 #### Install dependencies:
 Run `# composer install`
 
+#### Before running script
+Put the puzzle input in the src/Input file.
+
 #### Run script
 Run `# php src/main.php`
 
